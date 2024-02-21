@@ -1,5 +1,9 @@
 import json
-date = {
+print("Interface Status")
+print("================================================================================")
+print("DN                                                 Description           Speed    MTU  ")
+print("-------------------------------------------------- --------------------  ------  ------")
+x={
     "totalCount": "400",
     "imdata": [
         {
@@ -796,6 +800,9 @@ date = {
         }
     ]
 }
-for item in date["imdata"]:
-    attributes = item["l1PhysIf"]["attributes"]
-    print(attributes["dn"], attributes["descr"], attributes["speed"], attributes["mtu"])
+for i in x["imdata"]:
+    dn = i ["l1PhysIf"]["attributes"]["dn"]
+    descr= i ["l1PhysIf"]["attributes"]["descr"]
+    speed= i ["l1PhysIf"]["attributes"]["speed"]
+    mtu= i ["l1PhysIf"]["attributes"]["mtu"]
+    print(dn,"                           ",descr,speed,mtu)
