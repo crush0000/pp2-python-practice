@@ -1,0 +1,5 @@
+host="localhost"
+dbname="lab10" 
+user="postgres" 
+password="Aldiyar2005@"
+port="5433"
